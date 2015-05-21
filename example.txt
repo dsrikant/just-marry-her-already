@@ -1,0 +1,9 @@
+chrisweller at air in ~/Workspace/just_marry_her_already on master!
+± python encrypt.py ChrisWeller 12345678
+Key: 12345678
+Plaintext: ChrisWeller
+Blowfish Cyphertext: b0671378ae570bdd993dbe8ebbe5e79f
+
+chrisweller at air in ~/Workspace/just_marry_her_already on master!
+± python decrypt.py b0671378ae570bdd993dbe8ebbe5e79f 12345678
+Back to Plaintext: ChrisWeller

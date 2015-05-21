@@ -1,7 +1,5 @@
  # -*- coding: utf-8 -*-
-
 from Crypto.Cipher import Blowfish
-
 INPUT_SIZE = 8
 SSN_KEY = '123456789987654321'
  
@@ -20,6 +18,6 @@ crypt_obj = Blowfish.new(SSN_KEY, Blowfish.MODE_ECB)
 ciphertext = crypt_obj.encrypt(pad_string(plaintext))
  
 print "Plaintext: " + plaintext
-print "Blowfish Cyphertext: " + ciphertext
+print "Blowfish Cyphertext: " + ciphertext.encode('hex')
 print "Back to Plaintext: " + crypt_obj.decrypt(ciphertext)
 

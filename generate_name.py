@@ -19,10 +19,15 @@ print 'Full range conversion: ' + new_name
 
 # reverse attempt here.
 old_cipher = ''
-cycle_counter = 103
+next_calc = 0
 for elm in new_name:
     if ord(elm) >= 103:
-        pass
+        while ord(elm)-103-next_calc < 0:next_calc -= 6
+        print ord(elm) - 103 - next_calc
+        old_cipher += str(ord(elm)-103-next_calc)
+        next_calc = (next_calc + (ord(elm)-103)) 
+    else:
+        old_cipher += elm
 
 print 'Full range converstion reversal: ' + old_cipher
 

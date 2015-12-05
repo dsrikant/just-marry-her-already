@@ -13,9 +13,8 @@ def pad_string(str):
             new_str += " "
                 
     return new_str
- 
 
-def bro1(y):
+def map1(y):
   h = 0
   inc = 97
   while h < 96:
@@ -27,8 +26,7 @@ def bro1(y):
       if inc == 123:
           inc = 97
 
-
-def bro2(y):
+def map2(y):
     h = 0
     inc = 97
     while h < 256:
@@ -41,12 +39,12 @@ def bro2(y):
             inc = 97
 
 
-plaintext = "SrikantCabezas"
+plaintext = "SrikantWeller"
 crypt_obj = Blowfish.new(SSN_KEY, Blowfish.MODE_ECB)
 ciphertext = crypt_obj.encrypt(pad_string(plaintext))
 
 var = ":".join("{:02x}".format(ord(c)) for c in ciphertext)
-print var
+print "Var : " + var
 
 ohye = var.split(":")
 
@@ -63,13 +61,11 @@ name = []
 
 for y in new:
     if y < 97:
-        name.append(bro1(y))
+        name.append(map1(y))
     elif y > 122:
-        name.append(bro2(y))
+        name.append(map2(y))
     else:
         name.append(y)
-
-print "Huge fucking blank::::::::::::::::"
 
 for helo in name:
     print str(unichr(helo))
